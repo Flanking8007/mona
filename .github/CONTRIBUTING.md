@@ -179,4 +179,33 @@ implement UI and rework notification service
 
 You are free to do whatever you want on your branches. Once you deem your work finished, please go back on them to tidy your history of commits so that you have only meaningful commits that do not break the app and CICD when checked out individually.
 
+### License headers
+
+Mona follows the [REUSE](https://reuse.software) specification. Each file must say who holds the copyright and which license applies.
+
+**When you create a file**, add this header at the top:
+
+```dart
+// SPDX-FileCopyrightText: 2026 Your Name "your-github-username" <email>
+//
+// SPDX-License-Identifier: AGPL-3.0-only
+```
+
+**When you change a file**, add your name to its header. Do not remove the names that are already there.
+
+```dart
+// SPDX-FileCopyrightText: 2026 Example Name
+// SPDX-FileContributor: Your Name "your-github-username" <email>
+//
+// SPDX-License-Identifier: AGPL-3.0-only
+```
+
+Some files cannot hold a comment, for example JSON files and generated files. Put the header in a sidecar file instead. A sidecar has the same name with `.license` at the end.
+
+Check your headers before you push, with `reuse` installed:
+
+```bash
+reuse lint
+```
+
 Thank you for helping make Mona better!
